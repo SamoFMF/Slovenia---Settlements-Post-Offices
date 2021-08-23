@@ -1,0 +1,17 @@
+OPUSTILI:
+	Bežigrad, 1113
+	Brnik aerodrom, 4210
+	Ilirska Bistrica - Trnovo, 6251
+	Ljubljana p.p., 1001
+	Ljubljana - Brod, 1133
+	Ljubljana - Črnuče, 1231
+	Ljubljana - Dobrunje, 1261
+	Ljubljana - Dravlje, 1117
+	Ljubljana - Koseze, 1118
+	Ljubljana - Nove Jarše, 1122
+	Ljubljana - Polje, 1260
+	Ljubljana - Šentvid, 1210
+	Ljubljana - Šiška, 1107
+	Ljubljana - Šmartno, 1211
+	Ptuj - Breg, 2251
+	Mostec, 8257 (enaka cifra kot Dobova)

@@ -3,7 +3,7 @@ from os import replace
 from utils import loadFile, saveFile, coordToDeg
 import json
 from datastructure import *
-from typing import Dict, List, Tuple
+from typing import List, Tuple
 
 def replaceLetters(string: str, letterPairs: List[Tuple[str, str]]) -> str:
     for a, b in letterPairs:

@@ -32,14 +32,21 @@ if __name__ == "__main__":
     G = distToGraph(D)
 
     print("START REQUESTS")
-    istart = 300
-    iend = 500
+    istart = 5500
+    iend = len(G)
     results = []
     for i in range(istart, iend):
         if i%10 == 0: print(i)
         origins = [data[i]]
         destinations = [data[j] for j,_ in G[i] if j>i]
-        results.append(requests.post(createLink(origins, destinations, key)).json())
+        if len(destinations) > 0:
+            results.append(requests.post(createLink(origins, destinations, key)).json())
+            if results[-1]["status"] != "OK":
+                print(f"ERROR at i={i}")
+                break
+        else:
+            # add empty result
+            results.append(None)
     print("SAVING FILE")
     saveFile(f"gmaps_raw/distances_gmaps_{istart:04d}_{iend:04d}.pkl.gz", results)
     print("DONE")

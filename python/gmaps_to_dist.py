@@ -19,6 +19,9 @@ def createGraphs(rawData: List[dict], Graw: List[List[tuple]], n: int) -> Tuple[
     Gtime = [[] for _ in range(n)]
     for i in range(len(rawData)): # TODO: Replace with n, when distances is complete
         data = rawData[i]
+        if data is None:
+            # print("data is None:", i)
+            continue
         if data["status"] != "OK":
             # ERROR
             print("ERROR in line:", i)
@@ -47,5 +50,7 @@ if __name__ == "__main__":
     G = distToGraph(D)
 
     Gdist, Gtime = createGraphs(rawData, G, len(G))
+    print(sum(len(i) for i in Gdist) // 2)
+    print(sum(len(i) for i in Gtime) // 2)
     saveFile("gmaps/gmaps_distances10.pkl.gz", Gdist)
     saveFile("gmaps/gmaps_durations10.pkl.gz", Gtime)

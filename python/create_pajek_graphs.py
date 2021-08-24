@@ -54,6 +54,8 @@ def distToGraph(D):
 
 if __name__ == "__main__":
     D = loadFile("data/distances10.pkl.gz")
+    # Gdist = loadFile("gmaps/gmaps_distances10.pkl.gz")
+    # Gtime = loadFile("gmaps/gmaps_durations10.pkl.gz")
 
     data, centers = loadFile("data/naselja_poste.pkl.gz")
     wnodes = [d.population for d in data]
@@ -68,3 +70,5 @@ if __name__ == "__main__":
     #   slovenia_d_{distance used}_{wnodes!=None}_{labels!=None}.net
     #   example: "graphs/slovenia_d_full_0_0.net"
     getPajek("graphs/slovenia_d_10_1_0.net", distToGraph(D), wnodes)
+    # getPajek("graphs/slovenia_gmdist_10_1_0.net", Gdist, wnodes)
+    # getPajek("graphs/slovenia_gmtime_10_1_0.net", Gtime, wnodes)

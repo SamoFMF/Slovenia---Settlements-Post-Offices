@@ -133,6 +133,7 @@ dmypy.json
 /python/graphs
 /python/gmaps
 /python/gmaps_raw
+/python/gmaps_raw_unedited
 
 # Key
 mykey.env

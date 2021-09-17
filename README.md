@@ -7,7 +7,7 @@ Figure containing all Slovenian settlements. If a settlements contains a post of
 ![naselja in poste](figures/naselja_poste.png)
 
 ## Requirements
-`Python3.8` or newer is required and different scripts require different libraries:
+`Python3.8` or newer is required and different scripts require different libraries, including:
 - `matplotlibs`,
 - `pickle`,
 - `wikipedia`,
